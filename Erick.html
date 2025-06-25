@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <div id="particles-js"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Erick - Setores</title>
+  <link rel="stylesheet" href="styless-subpage.css" />
+</head>
+<body>
+</section>
+
+  <header>
+    <h1>Erick - Setores e Rotinas</h1>
+    <a href="index.html" class="back-button">← Voltar</a>
+  </header>
+
+  <main>
+   <section class="topic-section">
+  <h2>Aplicacçoes da IA em Diferentes Setores
+  </h2>
+  <ul class="topic-list">
+    <li>A Inteligência Artificial está transformando diversos setores com automação, análise de dados e decisões inteligentes</li>
+    <li>Marketing: A IA analisa comportamentos de consumo, segmenta públicos e personaliza campanhas, otimizando resultados e reduzindo custos.</li>
+    <li>Tecnologia da Informação (T.I.): Automatiza processos, detecta ameaças cibernéticas e aprimora o suporte técnico com assistentes virtuais.</li>
+    <li>Saúde: Auxilia no diagnóstico por imagem, gestão de prontuários e desenvolvimento de medicamentos com maior precisão e velocidade.</li>
+    <li>Finanças: Identifica fraudes, automatiza investimentos e oferece atendimento personalizado via chatbots.</li>
+    <li>Educação: Personaliza o ensino com plataformas adaptativas e tutores virtuais, promovendo maior engajamento.</li>
+  </ul>
+
+  <h2>Planejamento e Organização da Rotina de um Profissional com o Apoio da IA</h2>
+  <ul class="topic-list">
+    <li>A Inteligência Artificial tem se tornado uma aliada na organização das rotinas profissionais, ajudando no planejamento diário e na gestão de tempo de forma mais inteligente:</li>
+    <li>Planejamento do dia: Ferramentas com IA sugerem agendas personalizadas com base em prioridades, prazos e hábitos anteriores.</li>
+    <li>Automação de tarefas rotineiras: Respostas automáticas, criação de documentos e processamento de dados são realizados pela IA, economizando tempo.</li>
+    <li>Lembretes e notificações inteligentes: Sistemas aprendem os melhores horários para lembrar o usuário de compromissos e tarefas pendentes.</li>
+   <li>Organização de e-mails e arquivos: A IA classifica mensagens e documentos automaticamente, facilitando o acesso rápido às informações.</li>
+    <li>Análise de desempenho pessoal: Aplicativos indicam quais períodos do dia são mais produtivos, ajudando a ajustar a rotina para melhores resultados.</li>
+  </ul>
+</section>
+  </main>
+
+  <footer>
+    <p>Página de Erick | Projeto IA no Mercado de Trabalho</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "color": { "value": "#00c3ff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4 },
+      "size": { "value": 2 },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00c3ff",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
