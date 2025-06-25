@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <div id="particles-js"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eduardo - Comunicação</title>
+  <link rel="stylesheet" href="styless-subpage.css" />
+</head>
+<body>
+</section>
+
+  <header>
+    <h1>Eduardo - Comunicação e Desenvolvimento</h1>
+    <a href="index.html" class="back-button">← Voltar</a>
+  </header>
+
+  <main>
+    <section class="topic-section">
+  <h2>Comunicação, Redação e Formalização de Documentos e E-mails Através de IA</h2>
+  <ul class="topic-list">
+    <li>Aceleração na Redação de Textos: A IA pode gerar rascunhos de e-mails, relatórios e outros documentos com base em parâmetros pré-estabelecidos.</li>
+    <li>Revisão e Sugestões: Ferramentas de IA, como corretores ortográficos avançados e sugestões de estilo, ajudam a melhorar a clareza e formalidade do conteúdo.</li>
+    <li>Redação Personalizada: A IA pode adaptar a comunicação para diferentes públicos, ajustando tom, estilo e formalidade conforme o contexto e a audiência.</li>
+    <li>Automatização de Processos: A IA pode automatizar a criação e envio de e-mails, além de gerenciar respostas automáticas, aumentando a eficiência e reduzindo a carga de trabalho repetitiva.</li>
+  </ul>
+
+  <h2>Desenvolvimento de Documentos e Processos Empresariais com Utilização de IA</h2>
+  <ul class="topic-list">
+    <li>Criação Automática de Documentos: A IA pode gerar contratos, relatórios financeiros e outros documentos com base em modelos predefinidos, economizando tempo e recursos.</li>
+    <li>Otimização de Processos Internos: A IA pode analisar fluxos de trabalho e identificar pontos de ineficiência, recomendando melhorias para aumentar a agilidade e a produtividade.</li>
+    <li>Apoio à Decisão Estratégica: Utilizando análise preditiva, a IA ajuda empresas a tomar decisões informadas e a planejar futuros desenvolvimentos de processos e documentos.</li>
+    <li>Redução de Erros Humanos: A automação de processos e a geração de documentos pela IA minimizam os riscos de erros manuais, garantindo mais precisão.</li>
+  </ul>
+</section>
+  </main>
+
+  <footer>
+    <p>Página de Eduardo| Projeto IA no Mercado de Trabalho</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "color": { "value": "#00c3ff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4 },
+      "size": { "value": 2 },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00c3ff",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
