@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <div id="particles-js"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arthur -Benefícios </title>
+  <link rel="stylesheet" href="styless-subpage.css" />
+</head>
+<body>
+</section>
+
+  <header>
+    <h1>Arthur- Benefícios e Ética</h1>
+    <a href="index.html" class="back-button">← Voltar</a>
+  </header>
+
+  <main>
+    <section class="topic-section">
+  <h2>Benefícios da Inteligência Artificial para Empresas e Funcionários</h2>
+  <ul class="topic-list">
+    <li>Aumento da Produtividade: A IA pode automatizar tarefas repetitivas, liberando tempo para que funcionários se concentrem em atividades mais criativas e estratégicas.</li>
+    <li>Eficiência Operacional: A inteligência artificial permite a otimização de processos empresariais, reduzindo custos e melhorando a eficiência.</li>
+    <li>Suporte à Tomada de Decisão: Ferramentas de IA ajudam gestores e equipes a tomar decisões mais assertivas, baseadas em dados e análise preditiva</li>
+    <li>Melhoria no Atendimento ao Cliente: A IA pode personalizar a interação com o cliente, proporcionando uma experiência mais ágil e satisfatória.</li>
+  </ul>
+
+  <h2>Ética e Etiqueta no Uso da Inteligência Artificial</h2>
+  <ul class="topic-list">
+    <li>Privacidade de Dados: A IA deve ser utilizada de maneira transparente, garantindo que dados pessoais dos clientes e funcionários sejam protegidos e utilizados de forma ética.</li>
+    <li>Evitar Discriminação: Algoritmos de IA precisam ser treinados para evitar viéses que possam resultar em decisões injustas ou discriminatórias.</li>
+    <li>Transparência: As empresas devem ser claras sobre como estão utilizando a IA, tanto para seus clientes quanto para seus colaboradores.</li>
+    <li>Responsabilidade: A ética na IA envolve a responsabilidade por suas decisões, garantindo que as consequências de suas ações sejam consideradas e controladas.</li>
+  </ul>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Página de Arthur | Projeto IA no Mercado de Trabalho</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "color": { "value": "#00c3ff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4 },
+      "size": { "value": 2 },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00c3ff",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
