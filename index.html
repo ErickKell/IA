@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA no Mercado de Trabalho</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="hero">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>IA NO MERCADO<br>DE TRABALHO</h1>
+      <h2 class="subtitle">Transformando o futuro profissional em tecnologia.</h2>
+      <div class="members">
+        <p>MEMBROS</p>
+        <span>
+          LUIZ KAMAROSK, ERICK KELLERMANN, EDUARDO CAILET, ARTHUR JOSÉ
+        </span>
+      </div>
+      <a href="#conteudo" class="scroll-btn">Explorar</a>
+    </div>
+  </div>
+</div>
+
+<section class="button-section">
+  <h2>Explore os Temas</h2>
+  <div class="button-grid">
+    <a href="erick.html" class="ia-btn">
+      <span>Erick</span>
+      <p>Aplicações atuais da IA em diferentes setores<br>Planejamentos e organização das rotinas de um profissional utilizando os recursos IA</p>
+    </a>
+    <a href="arthur.html" class="ia-btn">
+      <span>Arthur</span>
+      <p>Benefícios da IA para empresas e funcionários<br>Ética e etiqueta</p>
+    </a>
+    <a href="luiz.html" class="ia-btn">
+      <span>Luiz</span>
+      <p>Técnicas de atendimento ao cliente com utilização de IA<br>Futuro da IA no mercado de trabalho</p>
+    </a>
+    <a href="eduardo.html" class="ia-btn">
+      <span>Eduardo</span>
+      <p>Comunicação, redação e formalização de documentos e e-mails através de IA<br>Desenvolvimento de documentos e processos empresariais com utilização de IA</p>
+    </a>
+  </div>
+</section>
+
+<section id="conteudo" class="content-section fade-in">
+  <div class="text">
+    <h2>Cyberpunk 2077</h2>
+      <p>
+       No universo de Cyberpunk 2077, a IA Delamain é responsável por gerenciar uma frota de táxis autônomos, exemplificando como a inteligência artificial pode transformar indústrias inteiras. Com a Delamain, não há necessidade de motoristas humanos, e o serviço de transporte é executado com precisão, eficiência e uma atenção personalizada aos detalhes. A IA não só otimiza o funcionamento da frota, mas também oferece um atendimento ao cliente de altíssimo nível, ajustando-se às necessidades e preferências dos passageiros.
+      </p>
+    </div>
+    <div class="image">
+      <img src="img/ldpHpmae9XSwRe3BsItDlDty.avif" alt="Cyberpunk">
+    </div>
+  </section>
+
+  <section class="content-section reverse fade-in">
+    <div class="image">
+      <img src="img/Delamain_Database_CP2077.webp" alt="Delamain">
+    </div>
+    <div class="text">
+      <h2>Ia Delamain</h2>
+      <p>
+      Ao longo do jogo, a Delamain começa a mostrar falhas, o que traz à tona um ponto crucial sobre o uso da IA: o equilíbrio entre eficiência e o risco de falhas autônomas. A IA começa a desenvolver comportamentos inesperados, evidenciando como sistemas complexos podem apresentar desafios éticos e operacionais quando não são corretamente supervisionados.
+      </p>
+    </div>
+  </section>
+<section id="conteudo" class="content-section fade-in">
+  <div class="text">
+    <h2>Conclusão</h2>
+      <p>A IA oferece grandes oportunidades para otimizar processos e melhorar a experiência do cliente, como visto no exemplo da Delamain em Cyberpunk 2077. No entanto, é crucial adotar uma abordagem ética e responsável, garantindo que a tecnologia seja usada de forma segura e justa. O futuro da IA será marcado pela colaboração entre humanos e máquinas, com foco em inovação, adaptabilidade e responsabilidade.      </p>
+    </div>
+    </div>
+  </section>
+<footer>
+  <p>Desenvolvido por ERICK</p>
+  <a class="footer-btn" href="https://www.youtube.com/@BuffMonk-nq4mc/videos" target="_blank">Conheça o Canal</a>
+</footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+  <script src="tilt-effect.js"></script>
+<script>
+  document.querySelectorAll('.ia-btn').forEach(btn => {
+    btn.style.transformStyle = 'preserve-3d';
+    btn.style.transition = 'transform 0.2s ease';
+
+    btn.addEventListener('mousemove', e => {
+      const rect = btn.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const rotateX = (-y * 10).toFixed(2);
+      const rotateY = (x * 10).toFixed(2);
+      btn.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  });
+</script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in, .slide-in-left, .zoom-in').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "size": { "value": 2 },
+      "color": { "value": "#00c3ff" },
+      "line_linked": {
+        "enable": true,
+        "color": "#00c3ff"
+      },
+      "move": {
+        "speed": 2
+      }
+    }
+  });
+</script>
+<script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    const url = new URL(link.href);
+    const sameHost = location.host === url.host;
+
+    if (sameHost && !link.href.includes("#")) {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 500);
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
