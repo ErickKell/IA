@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <div id="particles-js"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luiz - Técnicas</title>
+  <link rel="stylesheet" href="styless-subpage.css" />
+</head>
+<body>
+</section>
+
+  <header>
+    <h1>Luiz - Técnicas e Futuro</h1>
+    <a href="index.html" class="back-button">← Voltar</a>
+  </header>
+
+  <main>
+   <section class="topic-section">
+  <h2>Técnicas de atendimento ao cliente com utilização de IA</h2>
+  <ul class="topic-list">
+    <li>Chatbots e Assistentes Virtuais: Disponibilidade 24/7, oferecendo respostas rápidas e precisas a perguntas frequentes e dúvidas simples.</li>
+    <li>Personalização do Atendimento: A IA pode analisar dados de clientes e personalizar as interações, proporcionando recomendações e soluções personalizadas.</li>
+    <li>Análise de Sentimento: Ferramentas de IA podem detectar o sentimento do cliente (satisfeito, frustrado, etc.), permitindo uma abordagem mais empática e eficiente.</li>
+    <li>Redução de Tempo de Espera: Com a automação de processos, os clientes não precisam aguardar longos períodos, aumentando a satisfação e a fidelidade.</li>
+  </ul>
+
+  <h2>Futuro da IA no Mercado de Trabalho</h2>
+  <ul class="topic-list">
+    <li>Automação de Tarefas Repetitivas: A IA substituirá funções repetitivas, permitindo que os trabalhadores se concentrem em tarefas mais criativas e de maior valor agregado.</li>
+    <li>Novas Oportunidades de Emprego: A IA criará novas áreas de trabalho, especialmente em setores como análise de dados, programação e desenvolvimento de tecnologias emergentes.</li>
+    <li>Colaboração Homem-Máquina: O futuro será de colaboração entre humanos e IA, em vez de substituição. A IA complementará habilidades humanas e aumentará a produtividade.</li>
+    <li>Adaptação Necessária: Trabalhadores precisarão de novas habilidades e treinamento contínuo para se adaptar a um mercado de trabalho cada vez mais digitalizado e automatizado.</li>
+  </ul>
+</section>
+  </main>
+
+  <footer>
+    <p>Página de Luiz | Projeto IA no Mercado de Trabalho</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80 },
+      "color": { "value": "#00c3ff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4 },
+      "size": { "value": 2 },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00c3ff",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
